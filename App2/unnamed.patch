@@ -1,0 +1,789 @@
+Index: App/.idea/.gitignore
+===================================================================
+diff --git a/App/.idea/.gitignore b/App/.idea/.gitignore
+deleted file mode 100644
+--- a/App/.idea/.gitignore	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
++++ /dev/null	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: App/.idea/compiler.xml
+===================================================================
+diff --git a/App/.idea/compiler.xml b/App/.idea/compiler.xml
+deleted file mode 100644
+--- a/App/.idea/compiler.xml	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
++++ /dev/null	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
+@@ -1,13 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="CompilerConfiguration">
+-    <annotationProcessing>
+-      <profile name="Maven default annotation processors profile" enabled="true">
+-        <sourceOutputDir name="target/generated-sources/annotations" />
+-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+-        <outputRelativeToContentRoot value="true" />
+-        <module name="App" />
+-      </profile>
+-    </annotationProcessing>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: App/.idea/jarRepositories.xml
+===================================================================
+diff --git a/App/.idea/jarRepositories.xml b/App/.idea/jarRepositories.xml
+deleted file mode 100644
+--- a/App/.idea/jarRepositories.xml	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
++++ /dev/null	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
+@@ -1,20 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RemoteRepositoriesConfiguration">
+-    <remote-repository>
+-      <option name="id" value="central" />
+-      <option name="name" value="Central Repository" />
+-      <option name="url" value="https://repo.maven.apache.org/maven2" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="central" />
+-      <option name="name" value="Maven Central repository" />
+-      <option name="url" value="https://repo1.maven.org/maven2" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="jboss.community" />
+-      <option name="name" value="JBoss Community repository" />
+-      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+-    </remote-repository>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: App/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/App/.idea/misc.xml b/App/.idea/misc.xml
+deleted file mode 100644
+--- a/App/.idea/misc.xml	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
++++ /dev/null	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
+@@ -1,14 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="MavenProjectsManager">
+-    <option name="originalFiles">
+-      <list>
+-        <option value="$PROJECT_DIR$/pom.xml" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/out" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: App/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/App/.idea/vcs.xml b/App/.idea/vcs.xml
+deleted file mode 100644
+--- a/App/.idea/vcs.xml	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
++++ /dev/null	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: App/src/main/java/App/ApUser.java
+===================================================================
+diff --git a/App/src/main/java/App/ApUser.java b/App/src/main/java/App/ApUser.java
+deleted file mode 100644
+--- a/App/src/main/java/App/ApUser.java	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
++++ /dev/null	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
+@@ -1,62 +0,0 @@
+-package com.revature;
+-
+-import java.util.Objects;
+-
+-public class ApUser {
+-
+-
+-    private String username;
+-    private String password;
+-
+-    public ApUser(String username) {
+-        this.username = username;
+-        this.password = "password";
+-    }
+-
+-
+-    public ApUser(String username, String password) {
+-        this.username = username;
+-        this.password = password;
+-    }
+-
+-    public String getUsername() {
+-        return username;
+-    }
+-
+-    public void setUsername(String username) {
+-        this.username = username;
+-    }
+-
+-    public String getPassword() {
+-
+-        return password;
+-    }
+-
+-    public void setPassword(String password) {
+-
+-        this.password = password;
+-    }
+-
+-
+-    @Override
+-    public boolean equals(Object o) {
+-        if (this == o) return true;
+-        if (o == null || getClass() != o.getClass()) return false;
+-        String forTheDemo = ((AppUser) o).username;
+-        AppUser appUser = (AppUser) o;
+-        return Objects.equals(username, appUser.username) && Objects.equals(password, appUser.password);
+-    }
+-
+-    @Override
+-    public int hashCode() {
+-        return Objects.hash(username, password);
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return "AppUser{" +
+-                "username='" + username + '\'' +
+-                ", password='" + password + '\'' +
+-                '}';
+-    }
+-}
+\ No newline at end of file
+Index: App/src/main/java/DAOS/UserDAO.java
+===================================================================
+diff --git a/App/src/main/java/DAOS/UserDAO.java b/App/src/main/java/DAOS/UserDAO.java
+deleted file mode 100644
+--- a/App/src/main/java/DAOS/UserDAO.java	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
++++ /dev/null	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
+@@ -1,20 +0,0 @@
+-package com.dao;
+-
+-import com.entities.User;
+-
+-import java.util.List;
+-
+-public interface UserDAO {
+-
+-    User createUser(User user);
+-
+-    User getUserById(int id);
+-
+-    User getUserByUser(String username);
+-
+-    List<User> getAllUsers();
+-
+-    User updateUser(User user);
+-
+-    void deleteUserById(int id);
+-}
+\ No newline at end of file
+Index: App/src/main/java/DAOS/UserPostgres.java
+===================================================================
+diff --git a/App/src/main/java/DAOS/UserPostgres.java b/App/src/main/java/DAOS/UserPostgres.java
+deleted file mode 100644
+--- a/App/src/main/java/DAOS/UserPostgres.java	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
++++ /dev/null	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
+@@ -1,214 +0,0 @@
+-package com.dao;
+-
+-import com.entities.User;
+-import com.utils.ConnectionUtil;
+-import com.utils.CustomLogger;
+-import com.utils.LogLevel;
+-import org.apache.commons.lang3.exception.ExceptionUtils;
+-
+-import java.sql.*;
+-import java.util.ArrayList;
+-import java.util.List;
+-
+-public class UserPostgres implements UserDAO {
+-    String logString;
+-
+-    @Override
+-    public User createUser(User user) {
+-        try(Connection connection = ConnectionUtil.getConnection()) {
+-            logString = "Attempting to create user.";
+-            CustomLogger.log(logString, LogLevel.INFO);
+-            String sql = "insert into forum_app.app_users (first_name, last_name, email, username, password, profile_pic) values(?,?,?,?,?,?)";
+-            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+-            ps.setString(1, user.getFirstName());
+-            ps.setString(2, user.getLastName());
+-            ps.setString(3, user.getEmail());
+-            ps.setString(4, user.getUsername());
+-            ps.setString(5, user.getPassword());
+-            ps.setString(6, user.getProfilePic());
+-
+-            ps.execute();
+-
+-            //getting the generated primary key value
+-            ResultSet rs = ps.getGeneratedKeys();
+-            rs.next();
+-            int generatedID = rs.getInt("id");
+-
+-            user.setId(generatedID);// the book id changing for 0 to a non-zero values means that it is saved
+-            logString = "Created user successfully!";
+-            CustomLogger.log(logString, LogLevel.INFO);
+-            CustomLogger.parser();
+-            return user;
+-
+-        } catch (SQLException exception) {
+-            logString = String.format("An error occurred while creating a User. More Information: %s", ExceptionUtils.getStackTrace(exception));
+-            CustomLogger.log(logString, LogLevel.ERROR);
+-            CustomLogger.parser();
+-            exception.printStackTrace();
+-        }
+-        return null;
+-    }
+-
+-    @Override
+-    public User getUserById(int id) {
+-        try (Connection connection = ConnectionUtil.getConnection()){
+-            logString = "Attempting to retrieve post by User.";
+-            CustomLogger.log(logString, LogLevel.INFO);
+-            String sql = "select * from forum_app.app_users where id = ?";
+-            PreparedStatement ps = connection.prepareStatement(sql);
+-            ps.setInt(1,id);
+-            ResultSet rs = ps.executeQuery();
+-
+-            //Get First Record
+-            rs.next();
+-
+-            //Create a book and set the values of that book to the information in the result set
+-            User user = new User();
+-            user.setId(id);
+-            user.setFirstName(rs.getString("first_name"));
+-            user.setLastName(rs.getString("last_name"));
+-            user.setEmail(rs.getString("email"));
+-            user.setUsername(rs.getString("username"));
+-            user.setPassword(rs.getString("password"));
+-            user.setProfilePic(rs.getString("profile_pic"));
+-            user.setRoleId(rs.getInt("role_id"));
+-            logString = "Retrieved User successfully!.";
+-            CustomLogger.log(logString, LogLevel.INFO);
+-            CustomLogger.parser();
+-            return user;
+-
+-        } catch (SQLException exception){
+-            logString = String.format("User was not found... More Information: User ID: %d not found.", id);
+-            CustomLogger.log(logString,LogLevel.ERROR);
+-            CustomLogger.parser();
+-            System.err.println("Exception: User ID: " + id + " not found.");
+-        }
+-        return null;
+-    }
+-
+-    @Override
+-    public User getUserByUser(String username) {
+-        try (Connection connection = ConnectionUtil.getConnection()){
+-            logString = "Attempting to retrieve User by Username.";
+-            CustomLogger.log(logString, LogLevel.INFO);
+-            String sql = "select * from forum_app.app_users where username = ?";
+-            PreparedStatement ps = connection.prepareStatement(sql);
+-            ps.setString(1,username);
+-            ResultSet rs = ps.executeQuery();
+-
+-            //Get First Record
+-            rs.next();
+-
+-            //Create a book and set the values of that book to the information in the result set
+-            User user = new User();
+-            user.setId(rs.getInt("id"));
+-            user.setFirstName(rs.getString("first_name"));
+-            user.setLastName(rs.getString("last_name"));
+-            user.setEmail(rs.getString("email"));
+-            user.setUsername(rs.getString("username"));
+-            user.setPassword(rs.getString("password"));
+-            user.setProfilePic(rs.getString("profile_pic"));
+-            user.setRoleId(rs.getInt("role_id"));
+-            logString = "Retrieved User successfully!.";
+-            CustomLogger.log(logString, LogLevel.INFO);
+-            CustomLogger.parser();
+-            return user;
+-
+-        } catch (SQLException exception){
+-            logString = String.format("User was not found... More Information: Username: %d not found.", username);
+-            CustomLogger.log(logString,LogLevel.ERROR);
+-            CustomLogger.parser();
+-            System.err.println("Exception: Username: " + username + " not found.");
+-        }
+-        return null;
+-    }
+-
+-    @Override
+-    public List<User> getAllUsers() {
+-        try(Connection connection = ConnectionUtil.getConnection()){
+-            logString = "Attempting to retrieve all Users.";
+-            CustomLogger.log(logString, LogLevel.INFO);
+-            String sql = "select * from forum_app.app_users";
+-            PreparedStatement ps = connection.prepareStatement(sql);
+-            ResultSet rs = ps.executeQuery();
+-
+-            List<User> users = new ArrayList<User>();
+-
+-            while (rs.next()){
+-                User user = new User();
+-                user.setId(rs.getInt("id"));
+-                user.setFirstName(rs.getString("first_name"));
+-                user.setLastName(rs.getString("last_name"));
+-                user.setEmail(rs.getString("email"));
+-                user.setUsername(rs.getString("username"));
+-                user.setPassword(rs.getString("password"));
+-                user.setProfilePic(rs.getString("profile_pic"));
+-                user.setRoleId(rs.getInt("role_id"));
+-                users.add(user);
+-            }
+-            logString = "Retrieved all Users Successfully!";
+-            CustomLogger.log(logString, LogLevel.INFO);
+-            CustomLogger.parser();
+-            return users;
+-        } catch (SQLException exception) {
+-            logString = String.format("Error occurred while trying to find Users.. More information: %s", ExceptionUtils.getMessage(exception));
+-            CustomLogger.log(logString, LogLevel.ERROR);
+-            CustomLogger.parser();
+-            exception.printStackTrace();
+-        }
+-        return null;
+-    }
+-
+-    @Override
+-    public User updateUser(User user) {
+-        try(Connection connection = ConnectionUtil.getConnection()) {
+-            logString = "Attempting to update a User.";
+-            CustomLogger.log(logString, LogLevel.INFO);
+-            String sql = "update forum_app.app_users set first_name = ?, last_name = ?, email = ? , username = ?, password = ?, profile_pic = ?, role_id = ? where id = ?";
+-            PreparedStatement ps = connection.prepareStatement(sql);
+-            ps.setString(1, user.getFirstName());
+-            ps.setString(2, user.getLastName());
+-            ps.setString(3, user.getEmail());
+-            ps.setString(4, user.getUsername());
+-            ps.setString(5, user.getPassword());
+-            ps.setString(6, user.getProfilePic());
+-            ps.setInt(7, user.getRoleId());
+-            ps.setInt(8, user.getId());
+-
+-            ps.execute();
+-
+-            logString = "User updated successfully.";
+-            CustomLogger.log(logString, LogLevel.INFO);
+-            CustomLogger.parser();
+-            return user;
+-        } catch (SQLException exception) {
+-            logString = "User not found.";
+-            CustomLogger.log(logString, LogLevel.ERROR);
+-            CustomLogger.parser();
+-            System.err.println("Exception: User not found to update.");
+-            exception.printStackTrace();
+-        }
+-        return null;
+-    }
+-
+-    @Override
+-    public void deleteUserById(int id) {
+-        try(Connection connection = ConnectionUtil.getConnection()) {
+-            logString = "Attempting to delete a User.";
+-            CustomLogger.log(logString, LogLevel.INFO);
+-            String sql = "delete from forum_app.app_users where id = ?";
+-            PreparedStatement ps = connection.prepareStatement(sql);
+-            ps.setInt(1, id);
+-            ps.execute();
+-            logString = "User deleted successfully.";
+-            CustomLogger.log(logString, LogLevel.INFO);
+-            CustomLogger.parser();
+-        } catch (SQLException exception) {
+-            logString = "User not found.";
+-            CustomLogger.log(logString, LogLevel.ERROR);
+-            CustomLogger.parser();
+-            System.err.println("Exception: User not found to delete.");
+-            exception.printStackTrace();
+-        }
+-    }
+-}
+\ No newline at end of file
+Index: App/src/main/java/Entities/User.java
+===================================================================
+diff --git a/App/src/main/java/Entities/User.java b/App/src/main/java/Entities/User.java
+deleted file mode 100644
+--- a/App/src/main/java/Entities/User.java	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
++++ /dev/null	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
+@@ -1,105 +0,0 @@
+-package com.entities;
+-
+-public class User {
+-    private int id;
+-    private String firstName;
+-    private String lastName;
+-    private String email;
+-    private String username;
+-    private String password;
+-    private String profilePic;
+-    private int roleId=1;
+-
+-    public User() {
+-    }
+-
+-
+-    public User(int id, String firstName, String lastName, String email, String username, String password, String profilePic, int roleId) {
+-        this.id = id;
+-        this.firstName = firstName;
+-        this.lastName = lastName;
+-        this.email = email;
+-        this.username = username;
+-        this.password = password;
+-        this.profilePic = profilePic;
+-        this.roleId = roleId;
+-    }
+-
+-    public int getId() {
+-        return id;
+-    }
+-
+-    public void setId(int id) {
+-        this.id = id;
+-    }
+-
+-    public String getFirstName() {
+-        return firstName;
+-    }
+-
+-    public void setFirstName(String firstName) {
+-        this.firstName = firstName;
+-    }
+-
+-    public String getLastName() {
+-        return lastName;
+-    }
+-
+-    public void setLastName(String lastName) {
+-        this.lastName = lastName;
+-    }
+-
+-    public String getEmail() {
+-        return email;
+-    }
+-
+-    public void setEmail(String email) {
+-        this.email = email;
+-    }
+-
+-    public String getUsername() {
+-        return username;
+-    }
+-
+-    public void setUsername(String username) {
+-        this.username = username;
+-    }
+-
+-    public String getPassword() {
+-        return password;
+-    }
+-
+-    public void setPassword(String password) {
+-        this.password = password;
+-    }
+-
+-    public String getProfilePic() {
+-        return profilePic;
+-    }
+-
+-    public void setProfilePic(String profilePic) {
+-        this.profilePic = profilePic;
+-    }
+-
+-    public int getRoleId() {
+-        return roleId;
+-    }
+-
+-    public void setRoleId(int roleId) {
+-        this.roleId = roleId;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return "User{" +
+-                "id=" + id +
+-                ", firstName='" + firstName + '\'' +
+-                ", lastName='" + lastName + '\'' +
+-                ", email='" + email + '\'' +
+-                ", username='" + username + '\'' +
+-                ", password='" + password + '\'' +
+-                ", profilePic='" + profilePic + '\'' +
+-                ", roleId=" + roleId +
+-                '}';
+-    }
+-}
+\ No newline at end of file
+Index: App/src/main/java/Utils/Utils.java
+===================================================================
+diff --git a/App/src/main/java/Utils/Utils.java b/App/src/main/java/Utils/Utils.java
+deleted file mode 100644
+--- a/App/src/main/java/Utils/Utils.java	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
++++ /dev/null	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
+@@ -1,54 +0,0 @@
+-package Utils;
+-
+-import java.sql.Connection;
+-import java.sql.DriverManager;
+-import java.sql.SQLException;
+-import java.util.Properties;
+-
+-public class Utils {
+-
+-    private static ConnectionFactory connectionFactory;
+-
+-    public static ConnectionFactory getInstance() {
+-
+-        if (connectionFactory == null) {
+-            connectionFactory = new ConnectionFactory();
+-        }
+-
+-        return connectionFactory;
+-    }
+-
+-    static {
+-        try {
+-            Class.forName("org.postgresql.Driver");
+-        } catch (Exception e) {
+-            System.err.println("Failed to load PostgreSQL Driver");
+-            throw new RuntimeException(e); // fail fast
+-        }
+-    }
+-
+-    private final Properties Pro = new Properties();
+-
+-    private Utils() {
+-        try {
+-            props.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("application.properties"));
+-        } catch (Exception e) {
+-            System.err.println("Failed to load.");
+-            throw new RuntimeException(e);
+-        }
+-    }
+-
+-    public Connection getConnection() throws SQLException {
+-
+-        Connection conn = DriverManager.getConnection(pro.getProperty("url"),
+-                pro.getProperty("username"),
+-                pro.getProperty("password"));
+-
+-        if (conn == null) {
+-            throw new RuntimeException("Could not create connection ");
+-        }
+-        return conn;
+-
+-    }
+-
+-}
+\ No newline at end of file
+Index: App/src/main/.gitignore
+===================================================================
+diff --git a/App/src/main/.gitignore b/App/src/main/.gitignore
+deleted file mode 100644
+--- a/App/src/main/.gitignore	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
++++ /dev/null	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
+@@ -1,3 +0,0 @@
+-*.class
+-*.jar
+-*.war
+\ No newline at end of file
+Index: App/pom.xml
+===================================================================
+diff --git a/App/pom.xml b/App/pom.xml
+deleted file mode 100644
+--- a/App/pom.xml	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
++++ /dev/null	(revision 1bf78d6957fbd27530df9e9a49609a3ed7e93e7a)
+@@ -1,68 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0"
+-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+-    <modelVersion>4.0.0</modelVersion>
+-
+-    <groupId>org.example</groupId>
+-    <artifactId>Java</artifactId>
+-    <version>1.0-SNAPSHOT</version>
+-    <packaging>war</packaging>
+-
+-    <properties>
+-        <maven.compiler.source>8</maven.compiler.source>
+-        <maven.compiler.target>8</maven.compiler.target>
+-        <jackson-version>2.13.3</jackson-version>
+-    </properties>
+-
+-    <dependencies>
+-        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+-        <dependency>
+-            <groupId>org.postgresql</groupId>
+-            <artifactId>postgresql</artifactId>
+-            <version>42.3.6</version>
+-        </dependency>
+-
+-        <dependency>
+-            <groupId>org.junit.jupiter</groupId>
+-            <artifactId>junit-jupiter-engine</artifactId>
+-            <version>5.9.0-M1</version>
+-            <scope>test</scope>
+-        </dependency>
+-
+-        <dependency>
+-            <groupId>org.apache.commons</groupId>
+-            <artifactId>commons-lang3</artifactId>
+-            <version>3.12.0</version>
+-        </dependency>
+-        <dependency>
+-            <groupId>javax.servlet</groupId>
+-            <artifactId>javax.servlet-api</artifactId>
+-            <version>4.0.1</version>
+-        </dependency>
+-        <dependency>
+-            <groupId>com.fasterxml.jackson.core</groupId>
+-            <artifactId>jackson-databind</artifactId>
+-            <version>${jackson-version}</version>
+-        </dependency>
+-
+-
+-    </dependencies>
+-
+-    <build>
+-        <plugins>
+-            <plugin>
+-                <groupId>org.apache.tomcat.maven</groupId>
+-                <artifactId>tomcat7-maven-plugin</artifactId>
+-                <version>2.2</version>
+-                <configuration>
+-                    <url>http://localhost:8080/manager/text</url>
+-                    <server>LocalTomcat</server>
+-                    <path>/forumApp</path>
+-                    <update>true</update>
+-                </configuration>
+-            </plugin>
+-        </plugins>
+-    </build>
+-
+-</project>
+Index: App/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/App/.idea/workspace.xml b/App/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1654445892223)
++++ b/App/.idea/workspace.xml	(date 1654445892223)
+@@ -0,0 +1,89 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="2a6456c7-06d3-44d6-a626-be2cb844495b" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/.gitignore" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/App/ApUser.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/DAOS/UserDAO.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/DAOS/UserPostgres.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/User.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Utils.java" beforeDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++        <option value="Interface" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
++  <component name="MavenImportPreferences">
++    <option name="generalSettings">
++      <MavenGeneralSettings>
++        <option name="useMavenConfig" value="true" />
++      </MavenGeneralSettings>
++    </option>
++  </component>
++  <component name="ProjectId" id="2AA2Pkz7gUvm5WCbuegerie56SB" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
++  }
++}</component>
++  <component name="RecentsManager">
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$" />
++    </key>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="2a6456c7-06d3-44d6-a626-be2cb844495b" name="Changes" comment="" />
++      <created>1654438049202</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1654438049202</updated>
++    </task>
++    <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/App/.idea/.name b/App/.idea/.name
+deleted file mode 100644
+index 8e0c860cdfc0757532cc67441c02fd7a9ca169a1..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
