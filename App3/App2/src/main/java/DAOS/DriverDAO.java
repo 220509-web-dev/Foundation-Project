@@ -1,10 +1,10 @@
 package DAOS;
 
-import com.entities.User;
+import Entity.User;
 
 import java.util.List;
 
-public interface UserDAO {
+public interface DriverDAO {
 
     User createUser(User user);
 
@@ -15,6 +15,5 @@ public interface UserDAO {
     List<User> getAllUsers();
 
     User updateUser(User user);
-
     void deleteUserById(int id);
 }

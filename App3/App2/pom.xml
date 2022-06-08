@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>Java</artifactId>
+    <artifactId>App2</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -13,10 +13,13 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <jackson-version>2.13.3</jackson-version>
+
+        <java.home>
+
+        </java.home>
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -45,8 +48,6 @@
             <artifactId>jackson-databind</artifactId>
             <version>${jackson-version}</version>
         </dependency>
-
-
     </dependencies>
 
     <build>
@@ -58,11 +59,11 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <server>LocalTomcat</server>
-                    <path>/forumApp</path>
+                    <path>/Testing101</path>
                     <update>true</update>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
-
 </project>

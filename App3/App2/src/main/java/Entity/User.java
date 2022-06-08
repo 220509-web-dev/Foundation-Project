@@ -1,4 +1,4 @@
-package com.entities;
+package Entity;
 
 public class User {
     private int id;
@@ -7,7 +7,6 @@ public class User {
     private String email;
     private String username;
     private String password;
-    private String profilePic;
     private int roleId=1;
 
     public User() {
@@ -21,7 +20,6 @@ public class User {
         this.email = email;
         this.username = username;
         this.password = password;
-        this.profilePic = profilePic;
         this.roleId = roleId;
     }
 
@@ -73,14 +71,6 @@ public class User {
         this.password = password;
     }
 
-    public String getProfilePic() {
-        return profilePic;
-    }
-
-    public void setProfilePic(String profilePic) {
-        this.profilePic = profilePic;
-    }
-
     public int getRoleId() {
         return roleId;
     }
@@ -98,7 +88,6 @@ public class User {
                 ", email='" + email + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", profilePic='" + profilePic + '\'' +
                 ", roleId=" + roleId +
                 '}';
     }

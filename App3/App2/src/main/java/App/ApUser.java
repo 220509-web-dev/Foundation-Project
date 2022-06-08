@@ -1,4 +1,5 @@
-package com.revature;
+
+package Entity;
 
 import java.util.Objects;
 
@@ -42,8 +43,8 @@ public class ApUser {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        String forTheDemo = ((AppUser) o).username;
-        AppUser appUser = (AppUser) o;
+        String forTheDemo = ((ApUser) o).username;
+        ApUser appUser = (ApUser) o;
         return Objects.equals(username, appUser.username) && Objects.equals(password, appUser.password);
     }
 
