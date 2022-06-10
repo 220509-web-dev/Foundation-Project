@@ -20,8 +20,7 @@ public class DriverServlet extends HttpServlet {
         this.objectMapper = objectMapper;
         this.driverDAO = driverDAO;
     }
-
-
+    
 
 
         @Override
@@ -31,6 +30,14 @@ public class DriverServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        List<User> userList = driverDAO.getAllUsers();
+        String result = objectMapper.writeValueAsString(userList);
+        resp.setContentType("application/json");
+        resp.getWriter().write(result);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<User> userList = driverDAO.getAllUsers();
         String result = objectMapper.writeValueAsString(userList);
         resp.setContentType("application/json");

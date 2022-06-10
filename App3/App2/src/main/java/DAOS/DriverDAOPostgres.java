@@ -61,4 +61,8 @@ public class DriverDAOPostgres implements DriverDAO{
     public void deleteUserById(int id) {
 
     }
+
+    public List<User> getAccs() {
+        return null;
+    }
 }

@@ -1,21 +1,18 @@
-
-package Entity;
-
 import java.util.Objects;
 
-public class ApUser {
+public class Drivers {
 
 
     private String username;
     private String password;
 
-    public ApUser(String username) {
+    public Drivers(String username) {
         this.username = username;
         this.password = "password";
     }
 
 
-    public ApUser(String username, String password) {
+    public Drivers(String username, String password) {
         this.username = username;
         this.password = password;
     }
@@ -43,9 +40,9 @@ public class ApUser {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        String forTheDemo = ((ApUser) o).username;
-        ApUser appUser = (ApUser) o;
-        return Objects.equals(username, appUser.username) && Objects.equals(password, appUser.password);
+        String forTheDemo = ((Drivers) o).username;
+        Drivers driver = (Drivers) o;
+        return Objects.equals(username, driver.username) && Objects.equals(password, driver.password);
     }
 
     @Override
@@ -55,7 +52,7 @@ public class ApUser {
 
     @Override
     public String toString() {
-        return "AppUser{" +
+        return "ApUser{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';

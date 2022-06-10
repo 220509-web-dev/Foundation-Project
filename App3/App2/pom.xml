@@ -59,7 +59,7 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <server>LocalTomcat</server>
-                    <path>/Testing101</path>
+                    <path>/App2</path>
                     <update>true</update>
                 </configuration>
             </plugin>
